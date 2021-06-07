@@ -1,0 +1,35 @@
+<html>
+<head>
+<title>google.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+google.py</font>
+</center></td></tr></table>
+<pre><span class="s0">from </span><span class="s1">gtts </span><span class="s0">import </span><span class="s1">gTTS</span>
+<span class="s0">from </span><span class="s1">pygame </span><span class="s0">import </span><span class="s1">mixer</span>
+<span class="s0">import </span><span class="s1">os</span>
+
+<span class="s2">#sintetização com gTTS#</span>
+
+<span class="s1">voz = gTTS(</span><span class="s3">&quot;sintetizando voz com python&quot;</span><span class="s0">, </span><span class="s1">lang = </span><span class="s3">'pt'</span><span class="s1">)</span>
+<span class="s1">voz.save(</span><span class="s3">&quot;voz1.mp3&quot;</span><span class="s1">)</span>
+
+<span class="s2">#mixer.init()</span>
+<span class="s2">#mixer.music.load(&quot;voz.mp3&quot;)</span>
+<span class="s2">#mixer.music.play()</span>
+
+<span class="s1">os.system(</span><span class="s3">&quot;voz1.mp3&quot;</span><span class="s1">)</span>
+
+<span class="s1">x = input(</span><span class="s3">&quot;Digite algo para finalizar&quot;</span><span class="s1">)</span></pre>
+</body>
+</html>

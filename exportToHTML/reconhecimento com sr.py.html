@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>reconhecimento com sr.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+reconhecimento com sr.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">speech_recognition </span><span class="s0">as </span><span class="s1">sr</span>
+
+<span class="s2">#reconhecimento de voz#</span>
+
+<span class="s1">recon = sr.Recognizer()</span>
+<span class="s0">with </span><span class="s1">sr.Microphone() </span><span class="s0">as </span><span class="s1">source:</span>
+    <span class="s0">while True</span><span class="s1">:</span>
+        <span class="s1">recon.adjust_for_ambient_noise(source</span><span class="s0">, </span><span class="s1">duration=</span><span class="s3">3</span><span class="s1">)</span>
+        <span class="s1">print(</span><span class="s4">&quot;Diga algo&quot;</span><span class="s1">)</span>
+        <span class="s1">audio = recon.listen(source)</span>
+        <span class="s1">print(recon.recognize_sphinx(audio))</span></pre>
+</body>
+</html>
